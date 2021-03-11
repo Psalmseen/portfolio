@@ -35,13 +35,13 @@ a{
     max-width: 1000px;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 30rem 1fr 20rem;
 }
 .header{
     text-align: center;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: center;
 }
 .logo{
@@ -161,6 +161,74 @@ a{
     font-size: 4rem;
     margin-right: 1rem;
 }
+/*******************
+    PROJECT
+*******************/
+.project-wrapper{
+    display: grid;
+    justify-items: center;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
+.card{
+    min-height: 70rem;
+    max-width: 50rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: #2581b227;
+    box-shadow: 0 1rem 2rem rgba(255,255,255,.2);
+
+}
+.card-1{
+    background:url("./img/cardbg-1.jpg"),#333;
+}
+.card-2{
+    background: url("./img/cardbg-2.jpg"),#333;
+}
+.card__heading{
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    padding: 5rem 4rem 0;
+    background-blend-mode: overlay;
+    min-height: 30rem;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: cover;
+    font-size: 4rem;
+}
+.project__list,
+.achievement__list{
+    list-style: none;
+    font-size: 2rem;
+    margin: 5rem;
+    text-align: center;
+}
+.project__link{
+    padding:2rem;
+    background-color: transparent;
+    position: relative;
+}
+.project__link::after{
+    content: "page";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    z-index: -1;
+    position: absolute;
+    color: transparent;
+    padding: 1.5rem 0;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 0%;
+    display: inline-block;
+    background-color:#2580B299;
+}
+.project__link:hover::after,
+.project__link:focus::after{
+    width: 100%;
+}
+
 @media only screen and (min-width: 440px){
     html{
         font-size: 50%;
@@ -173,5 +241,15 @@ a{
     }
     body{
         gap: 6rem;
+    }
+}
+@media only screen and (max-width:330px){
+    html{
+        font-size:35%;
+    }
+}
+@media only screen and (max-width:280px){
+    html{
+        font-size:26%;
     }
 }
