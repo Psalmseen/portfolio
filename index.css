@@ -177,7 +177,8 @@ a{
     border-radius: 1rem;
     background-color: #2581b227;
     box-shadow: 0 1rem 2rem rgba(255,255,255,.2);
-
+    display: flex;
+    flex-direction: column;
 }
 .card-1{
     background:url("./img/cardbg-1.jpg"),#333;
@@ -197,11 +198,17 @@ a{
     background-size: cover;
     font-size: 4rem;
 }
+.card__item{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 .project__list,
 .achievement__list{
     list-style: none;
     font-size: 2rem;
-    margin: 5rem;
+    margin: 3rem;
     text-align: center;
 }
 .project__link{
